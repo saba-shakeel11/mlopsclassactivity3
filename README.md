@@ -3,7 +3,7 @@
 This repository is part of the **MLOps course activity** on **Continuous Integration and Deployment (CI/CD)** for Machine Learning.  
 The goal is to automate an ML workflow using **GitHub Actions** — from preprocessing to training, evaluation, and containerization.
 
-> ℹ️ The preprocessing step now auto-creates the `data/` directory, so you can run the pipeline on a clean clone without manual setup. The workflow also runs lightweight pytest checks on the preprocessed dataset before training.
+> ℹ️ The preprocessing step now auto-creates the `data/` directory, so you can run the pipeline on a clean clone without manual setup. The workflow runs lightweight pytest checks on the preprocessed dataset before training and stores evaluation metrics for a quality gate that enforces a minimum accuracy threshold.
 
 ---
 
@@ -41,8 +41,8 @@ mlops-ci-activity/
 
 ## ⚙️ Step-by-Step Instructions
 
-1️⃣ Fork this Repository → 2️⃣ Add Secrets (optional) → 3️⃣ Push to `main` → 4️⃣ Observe Actions tab  
-Artifacts and Docker builds will appear automatically.
+1️⃣ Fork this Repository → 2️⃣ Add Secrets (optional) → 3️⃣ Push to `main` or open a Pull Request → 4️⃣ Observe Actions tab  
+Artifacts and Docker builds will appear automatically for pushes to `main`, while pull requests still run the full quality gate without uploading artifacts.
 
 ---
 

@@ -1,3 +1,4 @@
 data/
+metrics.json
 model_v*.pkl
 __pycache__/

@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   train_evaluate:
@@ -31,9 +34,13 @@ jobs:
         run: python train.py --version ${{ github.run_number }}
 
       - name: Evaluate model
-        run: python evaluate.py --model model_v${{ github.run_number }}.pkl
+        run: python evaluate.py --model model_v${{ github.run_number }}.pkl --metrics-path metrics.json
+
+      - name: Quality gate
+        run: python quality_gate.py metrics.json 0.92
 
       - name: Upload model artifact
+        if: github.event_name == 'push'
         uses: actions/upload-artifact@v4
         with:
           name: model-v${{ github.run_number }}

@@ -1,0 +1,26 @@
+Pre-work / Setup (Instructor provides)
+
+The repo mlopsclassactivity2 (already provided).
+Ensure each student/pair has a fork or cloned copy with push access (or via their own GitHub).
+Quick review of the repo structure: train.py, app.py, Dockerfile.train, Dockerfile.serve, preprocess.py, requirements.txt, etc.
+If needed: an existing Docker registry (DockerHub or similar) credentials for container push steps (can be simplified or mocked if network/time is short).
+
+
+Activity Steps:
+1. Fork the provided repository: mlops-ci-activity.
+2. Explore the repository structure (preprocess.py, train.py, evaluate.py, requirements.txt).
+3. Review the workflow file located at .github/workflows/ci-pipeline.yml.
+4. Trigger the workflow by making a small change (e.g., edit README.md) and pushing to main.
+5. Observe the workflow execution in the GitHub Actions tab.
+6. Download the trained model artifact from the Actions run results.
+
+Discussion Questions:
+1 How does CI/CD improve collaboration in ML teams?
+2 What happens if the evaluation score is below a defined threshold?
+3 How can retraining or drift detection be integrated into this workflow?
+4 What steps are needed to deploy this workflow to production (e.g., AWS, Kubernetes)?
+
+Deliverables:
+1 GitHub repository link containing your implemented workflow.
+2 Screenshot of a successful workflow run with artifacts visible.
+3 (Optional) Modified workflow with PR trigger or quality gate step.

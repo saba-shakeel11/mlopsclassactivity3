@@ -16,7 +16,7 @@ with open(args.model, "rb") as f:
 
 y_pred = model.predict(X)
 accuracy = accuracy_score(y, y_pred)
-print(f"✅ Model evaluation complete. Accuracy: {accuracy:.2f}")
+print(f"Model evaluation complete. Accuracy: {accuracy:.2f}")
 
 if accuracy < 0.9:
-    raise SystemExit("❌ Model accuracy below threshold. Failing pipeline.")
+    raise SystemExit("Model accuracy below threshold. Failing pipeline.")

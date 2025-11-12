@@ -11,4 +11,4 @@ data["target"] = iris.target
 
 output_path = os.path.join(DATA_DIR, "preprocessed.csv")
 data.to_csv(output_path, index=False)
-print(f"✅ Data preprocessed and saved to {output_path}")
+print(f"Data preprocessed and saved to {output_path}")

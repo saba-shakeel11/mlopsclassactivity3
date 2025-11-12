@@ -24,6 +24,9 @@ jobs:
       - name: Preprocess data
         run: python preprocess.py
 
+      - name: Run tests
+        run: pytest
+
       - name: Train model
         run: python train.py --version ${{ github.run_number }}
 

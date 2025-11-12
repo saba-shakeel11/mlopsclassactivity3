@@ -21,4 +21,4 @@ model_path = f"model_v{args.version}.pkl"
 with open(model_path, "wb") as f:
     pickle.dump(model, f)
 
-print(f"✅ Model trained and saved as {model_path}")
+print(f"Model trained and saved as {model_path}")

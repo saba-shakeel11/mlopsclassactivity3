@@ -1,0 +1,3 @@
+data/
+model_v*.pkl
+__pycache__/
